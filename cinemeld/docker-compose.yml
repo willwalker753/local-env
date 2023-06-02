@@ -1,0 +1,11 @@
+version: '2'
+services:
+    cinemeld-webapp:
+        build:
+            dockerfile: Dockerfile.local
+            context: $PWD/../../dev/cinemeld-webapp-dev
+        volumes:
+            - $PWD/../../dev/cinemeld-webapp-dev/source:/code/source
+        ports:
+            - 3000:3000
+        
