@@ -5,6 +5,6 @@ workPath="$scriptPath$relWorkChange"
 
 cd $workPath
 
-nodebox npm instal
+nodebox npm install
 
 cd $startPath

@@ -4,9 +4,18 @@ services:
         container_name: cinemeld-webapp
         build:
             dockerfile: Dockerfile.local
-            context: $PWD/../../cinemeld-webapp
+            context: $PWD/../../dev/cinemeld-webapp-dev
         volumes:
-            - $PWD/../../cinemeld-webapp/source:/code/source
+            - $PWD/../../dev/cinemeld-webapp-dev/source:/code/source
         ports:
             - 3000:3000
+    general-backend:
+        container_name: general-backend
+        build:
+            dockerfile: Dockerfile.local
+            context: $PWD/../../prod/general-backend
+        volumes:
+            - $PWD/../../prod/general-backend/source:/code/source
+        ports:
+            - 8000:8000
         
