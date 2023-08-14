@@ -15,7 +15,7 @@ services:
             dockerfile: Dockerfile.local
             context: $PWD/../../prod/general-backend
         volumes:
-            - $PWD/../../prod/general-backend/source:/code/source
+            - $PWD/../../prod/general-backend:/code/source
         ports:
             - 8000:8000
         
