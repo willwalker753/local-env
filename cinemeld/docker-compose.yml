@@ -8,7 +8,7 @@ services:
         volumes:
             - $PWD/../../dev/cinemeld-webapp-dev/source:/code/source
         ports:
-            - 3000:3000
+            - "0.0.0.0:3000:3000"
     general-backend:
         container_name: general-backend
         build:
