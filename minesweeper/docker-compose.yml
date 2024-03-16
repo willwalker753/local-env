@@ -1,0 +1,11 @@
+version: '2'
+services:
+    minesweeper-webapp:
+        container_name: minesweeper-webapp
+        build:
+            dockerfile: Dockerfile.local
+            context: $PWD/../../dev/minesweeper-webapp
+        volumes:
+            - $PWD/../../dev/minesweeper-webapp/source:/code/source
+        ports:
+            - "0.0.0.0:3100:3000"
